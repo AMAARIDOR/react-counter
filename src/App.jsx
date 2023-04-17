@@ -17,10 +17,24 @@ function App() {
 
   return (
     <>
-      <button onClick={handleClickDecrement}>-</button>
-      <div>{count}</div>
-      <button onClick={handleClickIncrement}>+</button>
-      <button onClick={resetCounter}>Reset Counter</button>
+      <div className="container">
+        <div
+          className="btn unselectable decrementButton"
+          onClick={handleClickDecrement}
+        >
+          -
+        </div>
+        <div className="unselectable countDisplay">{count}</div>
+        <div
+          className="btn unselectable incrementButton"
+          onClick={handleClickIncrement}
+        >
+          +
+        </div>
+        <div className="btn unselectable resetButton" onClick={resetCounter}>
+          Reset
+        </div>
+      </div>
     </>
   );
 }
